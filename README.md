@@ -132,8 +132,8 @@ Week5_DataScience_SwiftLog/
 **Run locally**
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/Mideva-S/swiftlog-supply-chain-analytics.git
+cd swiftlog-supply-chain-analytics
 pip install pandas numpy matplotlib seaborn scipy scikit-learn networkx ydata-profiling jupyter
 jupyter notebook Notebook/Week5_DataScience.ipynb
 ```
