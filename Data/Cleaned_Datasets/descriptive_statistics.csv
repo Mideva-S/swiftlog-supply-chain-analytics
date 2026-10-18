@@ -1,0 +1,8 @@
+,mean,median,mode,variance,std,skewness,kurtosis
+OrderRevenue (orders with items),4548.29,3949.47,366.5,9915637.43,3148.91,0.99,0.98
+UnitsOrdered per order,16.49,15.0,10.0,116.1,10.77,0.77,0.63
+DelayDays,3.57,4.0,5.0,5.25,2.29,-0.05,-1.24
+Quantity per order line,5.5,6.0,9.0,8.33,2.89,-0.01,-1.24
+LineRevenue,1444.54,1152.12,261.43,1324768.77,1150.99,0.91,0.01
+UnitPrice,264.17,263.56,11.78,19600.91,140.0,-0.03,-1.2
+Stock per warehouse-product,410.49,364.0,416.0,80466.82,283.67,1.19,1.99

@@ -1,0 +1,12 @@
+,rows,columns,missing_values,duplicate_rows
+customers,1000,3,0,0
+delivery_performance,5000,3,0,0
+employees,200,2,0,0
+inventory,4000,3,0,3
+order_items,15000,4,0,0
+orders,5000,4,0,0
+products,250,3,0,0
+returns,500,3,0,0
+shipments,5000,4,0,0
+suppliers,150,2,0,0
+warehouses,15,2,0,0

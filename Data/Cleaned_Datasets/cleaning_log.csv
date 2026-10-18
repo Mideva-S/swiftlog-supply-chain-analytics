@@ -1,0 +1,13 @@
+Table(s),Issue / step,Finding,Action taken
+All tables,Key validation,Primary keys unique and non-null; all 10 foreign keys have 0 orphans,No change needed
+"customers, products, orders, delivery_performance, returns, warehouses",Text standardisation,"Trimmed spaces, applied Title Case; 0 values changed",No change needed
+All tables,Missing values,0 missing values found,No change needed
+inventory,Repeated Warehouse-Product rows,3 identical rows; repeats are stock movements per programme guidance,"Summed Stock per pair: 4,000 -> 2,455 rows"
+orders,Data type,OrderDate was text,Converted to datetime
+orders,Date features,Needed for trend analysis,"Added OrderYear, OrderMonth, OrderMonthName, OrderQuarter, OrderYearMonth"
+"shipments, delivery_performance",Conditional column,"Delayed = DelayDays >= 3 (inferred; matches given Status on all 5,000 rows)",Added IsDelayed
+order_items,Calculated columns,No revenue column provided,Added UnitPrice (from products) and LineRevenue = Quantity x UnitPrice
+orders,Calculated columns,Needed order-level revenue,"Added OrderRevenue, HasItems, CountsAsNetRevenue; 236 orders without items set to 0 revenue"
+returns,Repeated returns,27 orders have 2 returns; 5 repeat the same order and reason,"Kept all rows (unique ReturnID, no dates to confirm duplicates)"
+"order_items, inventory",Outliers (IQR),"LineRevenue: 119, Stock: 87 outliers; Quantity, UnitPrice, DelayDays: 0","Kept; values are legitimate (price x quantity, summed movements)"
+Low-cardinality text columns,Data type optimisation,Repeated labels stored as text,Converted to category; integers downcast
